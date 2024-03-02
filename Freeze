@@ -1,0 +1,10 @@
+for _, player in pairs(game.Players:GetPlayers()) do
+    local character = player.Character
+    if character then
+        for _, part in ipairs(character:GetDescendants()) do
+            if part:IsA("BasePart") then
+                part.Anchored = true --Change Anchored to false to turn off Freeze
+            end
+        end
+    end
+end
